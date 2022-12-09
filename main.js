@@ -12,6 +12,53 @@ const rl = readline.createInterface({
 
 
 const pigLatin = (word) => {
+  word = word.trim().toLowerCase();
+  const vowels = ['a','e','i','o','u'];
+  let position = 0;
+
+  if (vowels.includes(word[0])) {
+    return word + 'yay'
+  } else {
+    for (let i = 0; i < word.length; i++) {
+      if (vowels.includes(word[i])){
+        position = word.indexOf(word[i]);
+        break;
+      }
+    }
+    return word.substring(position) + word.substring(0,position) + 'ay';
+  }
+
+  // if (word === 'car') {
+  //   return 'arcay';
+  // }
+
+  // else if (word === 'dog') {
+  //   return 'ogday';
+  // }
+  // else if (word === 'create') {
+  //   return 'eatecray';
+  // }
+
+  // else if (word === 'valley') {
+  //   return 'alleyvay';
+  // }
+
+  // else if (word === 'egg') {
+  //   return 'eggyay';
+  // }
+
+  // else if (word === 'emission') {
+  //   return 'emissionyay';
+  // }
+
+  // else if (word === 'HeLlO ') {
+  //   return 'ellohay';
+  // }
+
+  // else if (word === ' RoCkEt') {
+  //   return 'ocketray';
+  // }
+
 
   // Your code here
 
