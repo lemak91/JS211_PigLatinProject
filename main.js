@@ -10,7 +10,7 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-
+//variable pigLatin takes in para "word"
 const pigLatin = (word) => {
   word = word.trim().toLowerCase();
   const vowels = ['a','e','i','o','u'];
@@ -25,6 +25,9 @@ const pigLatin = (word) => {
         break;
       }
     }
+
+    // first part is from the first vowel to the end of the word
+    // second part takes the beginning of the word and moving it to the end
     return word.substring(position) + word.substring(0,position) + 'ay';
   }
 
