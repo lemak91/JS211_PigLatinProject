@@ -1,4 +1,4 @@
-// import convertToPiglatin from "./piglatin";
+import convertToPiglatin from "./piglatin";
 console.log(convertToPiglatin('translate'))
 
 const textInput = document.getElementById("textInput");
