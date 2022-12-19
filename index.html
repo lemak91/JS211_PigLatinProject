@@ -3,17 +3,41 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <script src="main.js"></script>
+    <!-- <script src="main.js"></script> -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="piglatin.js"></script>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <hr/>
-    <div id="display-element"></div>
-    <form>
-      <input id="user-input" type="text">
-      <!-- How do you get this input sent to the pigLatin() function? -->
-      <button onclick="pigLatin()">Translate</button>
-    </form>  
-    <hr/>
+    <div class="whole-container">
+      <div class="container">
+        <header class="header">
+          <img src="./piggie.png" alt="pig icon" class="header-icon" />
+          <h1 class="header-title">Pig Latin Translator</h1>
+        </header>
+        <textarea
+          id="textInput"
+          name="text"
+          rows="2"
+          class="text-input"
+        ></textarea>
+        <input />
+        <div class="button-container">
+          <img
+            src="./pigface.png"
+            alt="pig face"
+            class="pig-button"
+            id="pigButton"
+          />
+          <div>
+            <button class="button" id="button">Oinkfy</button>
+            <button class="reset" id="reset">Reset</button>
+          </div>
+        </div>
+
+        <p class="text-output" id="textOutput"></p>
+      </div>
+
+      <script src="index.js"></script>
+    </div>
   </body>
 </html>
