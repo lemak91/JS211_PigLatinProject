@@ -1,4 +1,4 @@
-import convertToPiglatin from "./piglatin";
+import convertToPiglatin from "./piglatin.js";
 console.log(convertToPiglatin('translate'))
 
 const textInput = document.getElementById("textInput");
@@ -26,7 +26,7 @@ const translateToPigLatin = () => {
 
 button.addEventListener("click", (e) => {
     let words = input.split(" ");
-    let pigWord = words.map(word => convertToPiglatin(word)).join(" ");
+    let pigWord = words.map((word) => convertToPiglatin(word)).join(" ");
     textOutput.innerText = pigWord
 });
 
